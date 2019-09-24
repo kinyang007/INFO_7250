@@ -17,43 +17,32 @@ public class Main {
             MongoClient mongoClient = new MongoClient(uri);
             MongoDatabase database = mongoClient.getDatabase("INFO7250");
 
-            MongoCollection<Document> collection = checkOrCreateCollection(database, "movies");
-            List<Document> documents = readFiles("movies.dat");
-            ImportDocuments(collection, documents);
+            MongoCollection<Document> collection = createCollection(database, "movies");
+            readFilesAndImport(collection, "movies.dat");
 
-            collection = checkOrCreateCollection(database, "ratings");
-            documents = readFiles("ratings.dat");
-            ImportDocuments(collection, documents);
+            collection = createCollection(database, "ratings");
+            readFilesAndImport(collection, "ratings.dat");
 
-            collection = checkOrCreateCollection(database, "tags");
-            documents = readFiles("tags.dat");
-            ImportDocuments(collection, documents);
+            collection = createCollection(database, "tags");
+            readFilesAndImport(collection, "tags.dat");
         } catch (Exception e) {
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
         }
     }
 
-    public static MongoCollection<Document> checkOrCreateCollection(MongoDatabase database, String collectionName) {
+    public static MongoCollection<Document> createCollection(MongoDatabase database, String collectionName) {
+        MongoCollection<Document> collection;
         boolean collectionExists = database.listCollectionNames().into(new ArrayList<String>()).contains(collectionName);
-        if (!collectionExists) {
-            database.createCollection(collectionName);
+        if (collectionExists) {
+            collection = database.getCollection(collectionName);
+            database.drop();
         }
-        return database.getCollection(collectionName);
+        database.createCollection(collectionName);
+        collection = database.getCollection(collectionName);
+        return collection;
     }
 
-    public static void ImportDocuments(MongoCollection<Document> collection, List<Document> data) {
-        if (collection.count() != 0) {
-            collection.deleteMany(new Document());
-        }
-//        for (Document d : data) {
-//            collection.insertOne(d);
-//        }
-        collection.insertMany(data);
-        System.out.println("Import Finish!");
-    }
-
-    public static List<Document> readFiles(String filename) {
-        List<Document> documents = new ArrayList<Document>();
+    public static void readFilesAndImport(MongoCollection<Document> collection, String filename) {
         try {
             String path = System.getProperty("user.dir") + "/Part4/ml-10M100K/" + filename;
             FileInputStream inputStream = new FileInputStream(path);
@@ -77,11 +66,10 @@ public class Main {
                     doc.put("Tag", data[2]);
                     doc.put("Timestamp", Long.parseLong(data[3]));
                 }
-                documents.add(doc);
+                collection.insertOne(doc);
             }
         } catch (Exception e) {
             System.err.println(e);
         }
-        return documents;
     }
 }
