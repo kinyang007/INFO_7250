@@ -15,6 +15,7 @@ public class Main {
         try {
             MongoClientURI uri = new MongoClientURI("mongodb+srv://ProjectUser:abcd1234@cluster0-vyuoj.mongodb.net/test?retryWrites=true&w=majority");
             MongoClient mongoClient = new MongoClient(uri);
+//            MongoClient mongoClient = new MongoClient("localhost", 27017);
             MongoDatabase database = mongoClient.getDatabase("INFO7250");
 
             MongoCollection<Document> collection = createCollection(database, "movies");
@@ -23,8 +24,8 @@ public class Main {
             collection = createCollection(database, "ratings");
             readFilesAndImport(collection, "ratings.dat");
 
-            collection = createCollection(database, "tags");
-            readFilesAndImport(collection, "tags.dat");
+//            collection = createCollection(database, "tags");
+//            readFilesAndImport(collection, "tags.dat");
         } catch (Exception e) {
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
         }
@@ -35,7 +36,7 @@ public class Main {
         boolean collectionExists = database.listCollectionNames().into(new ArrayList<String>()).contains(collectionName);
         if (collectionExists) {
             collection = database.getCollection(collectionName);
-            database.drop();
+            collection.drop();
         }
         database.createCollection(collectionName);
         collection = database.getCollection(collectionName);
@@ -54,7 +55,18 @@ public class Main {
                 if (filename.equals("movies.dat")) {
                     doc.put("MovieID", Integer.parseInt(data[0]));
                     doc.put("Title", data[1]);
-                    doc.put("Genres", Arrays.asList(data[2].split("\\|")));
+                    StringBuilder year = new StringBuilder();
+                    int p = data[1].length();
+                    for (int i = p - 5; i < p - 1; i++) {
+                        year.append(data[1].charAt(i));
+                    }
+                    doc.put("Year", Integer.parseInt(year.toString()));
+                    List<String> genres = Arrays.asList(data[2].split("\\|"));
+                    if (genres.get(0).equals("(no genres listed)")) {
+                        doc.put("Genres", new ArrayList<String>());
+                    } else {
+                        doc.put("Genres", genres);
+                    }
                 } else if (filename.equals("ratings.dat")) {
                     doc.put("UserID", Integer.parseInt(data[0]));
                     doc.put("MovieID", Integer.parseInt(data[1]));
