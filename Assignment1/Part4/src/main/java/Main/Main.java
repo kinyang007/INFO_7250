@@ -13,9 +13,9 @@ import java.util.*;
 public class Main {
     public static void main(String args[]) {
         try {
-            MongoClientURI uri = new MongoClientURI("mongodb+srv://ProjectUser:abcd1234@cluster0-vyuoj.mongodb.net/test?retryWrites=true&w=majority");
-            MongoClient mongoClient = new MongoClient(uri);
-//            MongoClient mongoClient = new MongoClient("localhost", 27017);
+//            MongoClientURI uri = new MongoClientURI("mongodb+srv://ProjectUser:abcd1234@cluster0-vyuoj.mongodb.net/test?retryWrites=true&w=majority");
+//            MongoClient mongoClient = new MongoClient(uri);
+            MongoClient mongoClient = new MongoClient("localhost", 27017);
             MongoDatabase database = mongoClient.getDatabase("INFO7250");
 
             MongoCollection<Document> collection = createCollection(database, "movies");
@@ -24,8 +24,8 @@ public class Main {
             collection = createCollection(database, "ratings");
             readFilesAndImport(collection, "ratings.dat");
 
-//            collection = createCollection(database, "tags");
-//            readFilesAndImport(collection, "tags.dat");
+            collection = createCollection(database, "tags");
+            readFilesAndImport(collection, "tags.dat");
         } catch (Exception e) {
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
         }
