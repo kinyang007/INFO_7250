@@ -1,0 +1,7 @@
+lab2/CompositeKeyWritable.class
+lab2/NaturalKeyGroupComparator.class
+lab2/NaturalKeyPartitioner.class
+lab2/MapReduce.class
+lab2/BikeCountReducer.class
+lab2/SecondarySortComparator.class
+lab2/BikeMapper.class
