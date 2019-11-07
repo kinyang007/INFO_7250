@@ -270,3 +270,11 @@ A) Write the code to set the InputFormat that you would use?
     }
     ```
 
+## Links
+1. https://www.tutorialspoint.com/hadoop/pdf/hadoop_mock_test_i.pdf
+2. https://www.tutorialspoint.com/hadoop/pdf/hadoop_mock_test_ii.pdf
+3. https://www.tutorialspoint.com/hadoop/pdf/hadoop_mock_test_iii.pdf
+4. https://www.tutorialspoint.com/hadoop/pdf/hadoop_mock_test_iv.pdf
+5. http://hadooptutorial.info/100-interview-questions-on-hadoop/
+6. https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/FileSystemShell.html
+7. https://hadoop.apache.org/docs/r3.2.1/api
