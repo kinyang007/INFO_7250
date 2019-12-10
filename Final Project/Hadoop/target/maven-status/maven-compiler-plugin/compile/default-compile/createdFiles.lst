@@ -1,0 +1,14 @@
+Business/NumersInEachCityAndState/SecdonarySortComparator.class
+Review/PercentageOfRatings/RateMapper.class
+Business/Top5RatedBusinessInEachState/MapReduce.class
+Business/NumersInEachCityAndState/StateCityMapper.class
+Business/NumersInEachCityAndState/MapReduce.class
+Business/Top5RatedBusinessInEachState/StateTop5Mapper.class
+Business/NumersInEachCityAndState/NaturalKeyGroupComparator.class
+Business/NumersInEachCityAndState/StateCityReducer.class
+Business/NumersInEachCityAndState/StateCityKeyWritable.class
+Business/NumersInEachCityAndState/NaturalKeyPartitioner.class
+Business/Top5RatedBusinessInEachState/StateTop5Reducer.class
+Business/Top5RatedBusinessInEachState/BusinessWritable.class
+Review/PercentageOfRatings/RateReducer.class
+Review/PercentageOfRatings/MapReduce.class
