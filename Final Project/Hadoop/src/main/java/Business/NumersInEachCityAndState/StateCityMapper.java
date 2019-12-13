@@ -8,7 +8,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 
-public class StateCityMapper extends Mapper<LongWritable, Text, StateCityKeyWritable, IntWritable> {
+public class StateCityMapper extends Mapper<LongWritable, Text, StateCityKeyWritableComparable, IntWritable> {
 
     private IntWritable one = new IntWritable(1);
 
@@ -18,8 +18,8 @@ public class StateCityMapper extends Mapper<LongWritable, Text, StateCityKeyWrit
 
         String city = object.getString("city");
         String state = object.getString("state");
-        StateCityKeyWritable stateCityKeyWritable = new StateCityKeyWritable(state, city);
+        StateCityKeyWritableComparable stateCityKeyWritableComparable = new StateCityKeyWritableComparable(state, city);
 
-        context.write(stateCityKeyWritable, one);
+        context.write(stateCityKeyWritableComparable, one);
     }
 }

@@ -6,5 +6,7 @@ hadoop jar Hadoop-1.0-SNAPSHOT.jar Business.Top5RatedBusinessInEachState.MapRedu
 # Hadoop: Perentage of Ratings
 hadoop jar Hadoop-1.0-SNAPSHOT.jar Review.PercentageOfRatings.MapReduce /yelp/review.json /fpresults/hadoop/PercentageOfRatings
 # Hadoop: Moving average rating of each business
-hadoop jar Hadoop-1.0-SNAPSHOT.jar
+hadoop jar Hadoop-1.0-SNAPSHOT.jar Review.MovingAverageRatingOfEachBusiness.MapReduce /yelp/review.json /fpresults/hadoop/MovingAverageRatingOfEachBusiness
+# HBase: Perentage of Ratings
+hadoop jar HBase-1.0-SNAPSHOT.jar Review.PercentageOfRatings.MapReduce
 

@@ -19,11 +19,7 @@ public class MapReduce {
 
         job.setJarByClass(MapReduce.class);
 
-        job.setPartitionerClass(NaturalKeyPartitioner.class);
-        job.setGroupingComparatorClass(NaturalKeyGroupComparator.class);
-        job.setSortComparatorClass(SecdonarySortComparator.class);
-
-        job.setMapOutputKeyClass(StateCityKeyWritable.class);
+        job.setMapOutputKeyClass(StateCityKeyWritableComparable.class);
         job.setMapOutputValueClass(IntWritable.class);
 
         job.setInputFormatClass(TextInputFormat.class);
