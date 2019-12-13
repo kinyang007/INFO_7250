@@ -34,6 +34,11 @@ public class MapReduce {
         FileSystem fs = FileSystem.get(conf);
         fs.delete(new Path(args[1]), true);
 
-        System.exit(job.waitForCompletion(true) ? 0 : 1);
+        long startTime = System.currentTimeMillis();
+        boolean result = job.waitForCompletion(true);
+        long endTime = System.currentTimeMillis();
+        System.out.println("Hadoop Number of Businesses in each city and state MapReduce Time: " + (endTime - startTime) + " ms");
+
+        System.exit(result ? 0 : 1);
     }
 }

@@ -9,12 +9,12 @@ import java.util.*;
 
 public class RateReducer extends Reducer<DoubleWritable, IntWritable, DoubleWritable, DoubleWritable> {
 
-    private HashMap<Double, Integer> ratings;
+    private TreeMap<Double, Integer> ratings;
     private int total;
 
     @Override
     public void setup(Context context) {
-        ratings = new HashMap<>();
+        ratings = new TreeMap<>();
         total = 0;
     }
 

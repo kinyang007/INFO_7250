@@ -59,7 +59,7 @@
     <option name="viewStates">
       <list>
         <serviceView>
-          <option name="contentProportion" value="0.25639153" />
+          <option name="contentProportion" value="0.3469686" />
           <treeState>
             <expand>
               <path>
@@ -79,30 +79,34 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="320" y="115" key="#SQL_Dialects" timestamp="1576226493044">
+    <state x="320" y="115" key="#SQL_Dialects" timestamp="1576236384132">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="115" key="#SQL_Dialects/0.0.1440.900@0.0.1440.900" timestamp="1576226493044" />
+    <state x="320" y="115" key="#SQL_Dialects/0.0.1440.900@0.0.1440.900" timestamp="1576236384132" />
     <state x="320" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576225160274">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="320" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1576225160274" />
-    <state width="1171" height="379" key="GridCell.Tab.0.bottom" timestamp="1576228186043">
+    <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1576236859761">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1171" height="379" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1576228186043" />
-    <state width="1171" height="379" key="GridCell.Tab.0.center" timestamp="1576228186042">
+    <state width="254" height="195" key="DatabaseViewActions_Filter/0.0.1440.900@0.0.1440.900" timestamp="1576236859761" />
+    <state width="893" height="363" key="GridCell.Tab.0.bottom" timestamp="1576267525890">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1171" height="379" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1576228186042" />
-    <state width="1171" height="379" key="GridCell.Tab.0.left" timestamp="1576228186041">
+    <state width="893" height="363" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1576267525890" />
+    <state width="893" height="363" key="GridCell.Tab.0.center" timestamp="1576267525889">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1171" height="379" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1576228186041" />
-    <state width="1171" height="379" key="GridCell.Tab.0.right" timestamp="1576228186042">
+    <state width="893" height="363" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1576267525889" />
+    <state width="893" height="363" key="GridCell.Tab.0.left" timestamp="1576267525888">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1171" height="379" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1576228186042" />
+    <state width="893" height="363" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1576267525888" />
+    <state width="893" height="363" key="GridCell.Tab.0.right" timestamp="1576267525890">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="893" height="363" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1576267525890" />
     <state x="626" y="352" width="350" height="220" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1576225175075">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

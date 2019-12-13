@@ -1289,7 +1289,38 @@
       <ClassName>org.apache.hadoop.hive.ql.udf.UDFYear</ClassName>
       <AutoCreated>1</AutoCreated>
     </routine>
-    <table id="262" parent="2" name="review">
+    <table id="262" parent="2" name="business">
+      <RowFormatSerde>org.apache.hive.hcatalog.data.JsonSerDe</RowFormatSerde>
+      <InputFormat>org.apache.hadoop.mapred.TextInputFormat</InputFormat>
+      <OutputFormat>org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat</OutputFormat>
+      <Location>hdfs://localhost:9000/user/hive/warehouse/business</Location>
+      <Temporary>1</Temporary>
+    </table>
+    <table id="263" parent="2" name="number_of_businesses_each_city_and_state">
+      <Properties>bucketing_version
+2</Properties>
+      <RowFormatSerde>org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe</RowFormatSerde>
+      <SerdeProperties>field.delim
+,
+line.delim
+\n</SerdeProperties>
+      <InputFormat>org.apache.hadoop.mapred.TextInputFormat</InputFormat>
+      <OutputFormat>org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat</OutputFormat>
+      <Location>hdfs://localhost:9000/user/hive/warehouse/number_of_businesses_each_city_and_state</Location>
+    </table>
+    <table id="264" parent="2" name="percentage_of_ratings">
+      <Properties>bucketing_version
+2</Properties>
+      <RowFormatSerde>org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe</RowFormatSerde>
+      <SerdeProperties>field.delim
+,
+line.delim
+\n</SerdeProperties>
+      <InputFormat>org.apache.hadoop.mapred.TextInputFormat</InputFormat>
+      <OutputFormat>org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat</OutputFormat>
+      <Location>hdfs://localhost:9000/user/hive/warehouse/percentage_of_ratings</Location>
+    </table>
+    <table id="265" parent="2" name="review">
       <Properties>bucketing_version
 2</Properties>
       <RowFormatSerde>org.apache.hive.hcatalog.data.JsonSerDe</RowFormatSerde>
@@ -1297,5 +1328,25 @@
       <OutputFormat>org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat</OutputFormat>
       <Location>hdfs://localhost:9000/user/hive/warehouse/review</Location>
     </table>
+    <column id="266" parent="263" name="state">
+      <Position>1</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="267" parent="263" name="city">
+      <Position>2</Position>
+      <DataType>string|12s</DataType>
+    </column>
+    <column id="268" parent="263" name="count">
+      <Position>3</Position>
+      <DataType>bigint|-5s</DataType>
+    </column>
+    <column id="269" parent="264" name="stars">
+      <Position>1</Position>
+      <DataType>int|4s</DataType>
+    </column>
+    <column id="270" parent="264" name="percentage">
+      <Position>2</Position>
+      <DataType>string|12s</DataType>
+    </column>
   </database-model>
 </dataSource>

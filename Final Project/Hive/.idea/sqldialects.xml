@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/Business/import_business.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/Business/number_of_businesses_each_city_and_state.sql" dialect="HiveQL" />
     <file url="file://$PROJECT_DIR$/Review/import_review.sql" dialect="HiveQL" />
     <file url="file://$PROJECT_DIR$/Review/percentage_of_ratings.sql" dialect="HiveQL" />
   </component>

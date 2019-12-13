@@ -36,7 +36,7 @@ public class MapReduce {
         long startTime = System.currentTimeMillis();
         boolean result = job.waitForCompletion(true);
         long endTime = System.currentTimeMillis();
-        System.out.println("HBase Percentage of Ratings MapReduce Time: " + (double)(endTime - startTime) / 1000.0 + " ms");
+        System.out.println("HBase Percentage of Ratings MapReduce Time: " + (endTime - startTime) + " ms");
 
         System.exit(result ? 0 : 1);
     }

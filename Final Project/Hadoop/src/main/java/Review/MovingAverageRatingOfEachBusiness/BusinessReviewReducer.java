@@ -7,10 +7,13 @@ import java.io.IOException;
 import java.text.*;
 import java.util.*;
 
-public class BusinessReducer extends Reducer<CompositeKey, BusinessRatingData, Text, Text> {
+public class BusinessReviewReducer extends Reducer<CompositeKey, BusinessRatingData, Text, Text> {
 
     private Text outputKey = new Text();
     private Text outputValue = new Text();
+
+//    private ArrayList<BusinessRatingData> reviewList = new ArrayList<>();
+//    private ArrayList<BusinessRatingData> businessList = new ArrayList<>();
 
     public void reduce(CompositeKey key, Iterable<BusinessRatingData> values, Context context) throws IOException, InterruptedException {
         MovingAverage ma = new MovingAverage(10);

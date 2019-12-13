@@ -1,4 +1,3 @@
-Review/MovingAverageRatingOfEachBusiness/BusinessReducer.class
 Review/MovingAverageRatingOfEachBusiness/NaturalKeyPartitioner.class
 Review/MovingAverageRatingOfEachBusiness/BusinessMapper.class
 Review/PercentageOfRatings/RateMapper.class
@@ -11,8 +10,10 @@ Business/NumersInEachCityAndState/StateCityReducer.class
 Business/Top5RatedBusinessInEachState/StateTop5Reducer.class
 Review/MovingAverageRatingOfEachBusiness/MovingAverage.class
 Review/MovingAverageRatingOfEachBusiness/CompositeKey.class
+Review/MovingAverageRatingOfEachBusiness/BusinessReviewReducer.class
 Business/NumersInEachCityAndState/StateCityKeyWritableComparable.class
 Business/Top5RatedBusinessInEachState/BusinessWritable.class
+Review/MovingAverageRatingOfEachBusiness/ReviewMapper.class
 Review/MovingAverageRatingOfEachBusiness/BusinessRatingData.class
 Review/MovingAverageRatingOfEachBusiness/NaturalKeyGroupingComparator.class
 Review/PercentageOfRatings/RateReducer.class

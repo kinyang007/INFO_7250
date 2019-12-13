@@ -1,3 +1,6 @@
+Business/NumbersInEachCityAndState/StateCityMapper.class
 Review/PercentageOfRatings/RateMapper.class
+Business/NumbersInEachCityAndState/MapReduce.class
+Business/NumbersInEachCityAndState/StateCityReducer.class
 Review/PercentageOfRatings/RateReducer.class
 Review/PercentageOfRatings/MapReduce.class

@@ -10,6 +10,7 @@ import java.util.Date;
 
 public class BusinessRatingData implements WritableComparable<BusinessRatingData> {
 
+    private String businessName;
     private long timestamp;
     private double rate;
 
@@ -17,8 +18,13 @@ public class BusinessRatingData implements WritableComparable<BusinessRatingData
     }
 
     public BusinessRatingData(long timestamp, double rate) {
+        businessName = "empty";
         this.timestamp = timestamp;
         this.rate = rate;
+    }
+
+    public BusinessRatingData(String businessName) {
+        this.businessName = businessName;
     }
 
     @Override
@@ -36,6 +42,14 @@ public class BusinessRatingData implements WritableComparable<BusinessRatingData
     public void readFields(DataInput dataInput) throws IOException {
         timestamp = dataInput.readLong();
         rate = dataInput.readDouble();
+    }
+
+    public String getBusinessName() {
+        return businessName;
+    }
+
+    public void setBusinessName(String businessName) {
+        this.businessName = businessName;
     }
 
     public long getTimestamp() {
