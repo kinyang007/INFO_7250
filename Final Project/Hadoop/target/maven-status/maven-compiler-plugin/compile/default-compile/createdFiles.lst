@@ -1,5 +1,4 @@
 Review/MovingAverageRatingOfEachBusiness/NaturalKeyPartitioner.class
-Review/MovingAverageRatingOfEachBusiness/BusinessMapper.class
 Review/PercentageOfRatings/RateMapper.class
 Business/Top5RatedBusinessInEachState/MapReduce.class
 Business/NumersInEachCityAndState/StateCityMapper.class

@@ -7,7 +7,6 @@ import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
 
 import java.io.IOException;
-import java.util.*;
 
 public class StateCityMapper extends TableMapper<Text, IntWritable> {
 
@@ -22,9 +21,9 @@ public class StateCityMapper extends TableMapper<Text, IntWritable> {
         byte[] tmp1 = value.getValue(POSITION, STATE);
         byte[] tmp2 = value.getValue(POSITION, CITY);
 
-        String state = Base64.getEncoder().encodeToString(tmp1);
-        String city = Base64.getEncoder().encodeToString(tmp2);
-        key.set(state + "," + city);
+        String state = new String(tmp1);
+        String city = new String(tmp2);
+        key.set(state + "\t" + city);
         context.write(key, one);
     }
 

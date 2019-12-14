@@ -21,7 +21,10 @@ public class StateCityKeyWritableComparable implements WritableComparable<StateC
 
     @Override
     public int compareTo(StateCityKeyWritableComparable o) {
-        return state.compareTo(o.state);
+        if (state.compareTo(o.state) != 0) {
+            return state.compareTo(o.state);
+        }
+        return city.compareTo(o.city);
     }
 
     @Override

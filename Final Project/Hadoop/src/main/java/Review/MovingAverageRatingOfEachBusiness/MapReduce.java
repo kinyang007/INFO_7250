@@ -5,7 +5,6 @@ import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
-import org.apache.hadoop.mapreduce.lib.input.MultipleInputs;
 import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
@@ -31,8 +30,6 @@ public class MapReduce {
         job.setReducerClass(BusinessReviewReducer.class);
 
         FileInputFormat.addInputPath(job, new Path(args[0]));
-//        MultipleInputs.addInputPath(job, new Path(args[0]), TextInputFormat.class, ReviewMapper.class);
-//        MultipleInputs.addInputPath(job, new Path(args[1]), TextInputFormat.class, BusinessMapper.class);
         FileOutputFormat.setOutputPath(job, new Path(args[1]));
 
         FileSystem fs = FileSystem.get(conf);

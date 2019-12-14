@@ -19,9 +19,9 @@ public class StateCityReducer extends TableReducer<Text, IntWritable, ImmutableB
     private static int row = 0;
 
     public void reduce(Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {
-        String[] tmp = key.toString().split(",");
+        String[] tmp = key.toString().split("\t");
         String state = tmp[0];
-        String city = tmp[1];
+        String city = tmp.length == 2 ? tmp[1] : "";
 
         int sum = 0;
         for (IntWritable value : values) {

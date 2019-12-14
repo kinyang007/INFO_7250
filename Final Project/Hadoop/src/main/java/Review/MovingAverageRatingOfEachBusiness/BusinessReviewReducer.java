@@ -12,9 +12,6 @@ public class BusinessReviewReducer extends Reducer<CompositeKey, BusinessRatingD
     private Text outputKey = new Text();
     private Text outputValue = new Text();
 
-//    private ArrayList<BusinessRatingData> reviewList = new ArrayList<>();
-//    private ArrayList<BusinessRatingData> businessList = new ArrayList<>();
-
     public void reduce(CompositeKey key, Iterable<BusinessRatingData> values, Context context) throws IOException, InterruptedException {
         MovingAverage ma = new MovingAverage(10);
         for (BusinessRatingData value : values) {

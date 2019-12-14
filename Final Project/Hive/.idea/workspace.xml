@@ -34,6 +34,13 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="default: schema" type="31331dd0:HiveImplModel$Schema" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Hive@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="default: schema" type="31331dd0:HiveImplModel$Schema" />
+        <item name="business: table" type="1da66f9e:HiveImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
@@ -47,6 +54,7 @@
     <property name="DBE.Init.BalloonShown" value="true" />
     <property name="DatabaseDriversLRU" value="hive" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="database.data.extractors.current.id" value="Tab-separated (TSV)_id" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
@@ -59,7 +67,7 @@
     <option name="viewStates">
       <list>
         <serviceView>
-          <option name="contentProportion" value="0.3469686" />
+          <option name="contentProportion" value="0.19503286" />
           <treeState>
             <expand>
               <path>
@@ -91,25 +99,29 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="254" height="195" key="DatabaseViewActions_Filter/0.0.1440.900@0.0.1440.900" timestamp="1576236859761" />
-    <state width="893" height="363" key="GridCell.Tab.0.bottom" timestamp="1576267525890">
+    <state width="1101" height="245" key="GridCell.Tab.0.bottom" timestamp="1576307805132">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="893" height="363" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1576267525890" />
-    <state width="893" height="363" key="GridCell.Tab.0.center" timestamp="1576267525889">
+    <state width="1101" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1576307805132" />
+    <state width="1101" height="245" key="GridCell.Tab.0.center" timestamp="1576307805131">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="893" height="363" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1576267525889" />
-    <state width="893" height="363" key="GridCell.Tab.0.left" timestamp="1576267525888">
+    <state width="1101" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1576307805131" />
+    <state width="1101" height="245" key="GridCell.Tab.0.left" timestamp="1576307805129">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="893" height="363" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1576267525888" />
-    <state width="893" height="363" key="GridCell.Tab.0.right" timestamp="1576267525890">
+    <state width="1101" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1576307805129" />
+    <state width="1101" height="245" key="GridCell.Tab.0.right" timestamp="1576307805131">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="893" height="363" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1576267525890" />
+    <state width="1101" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1576307805131" />
     <state x="626" y="352" width="350" height="220" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1576225175075">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="626" y="352" width="350" height="220" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1440.900@0.0.1440.900" timestamp="1576225175075" />
+    <state x="458" y="262" key="com.intellij.database.dbimport.ImportUtil.MyDialog" timestamp="1576304510211">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="458" y="262" key="com.intellij.database.dbimport.ImportUtil.MyDialog/0.0.1440.900@0.0.1440.900" timestamp="1576304510211" />
   </component>
 </project>
